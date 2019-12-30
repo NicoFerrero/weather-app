@@ -4,6 +4,10 @@ function initMap() {
     center: { lat: -25.363882, lng: 131.044922 },
   });
 
+  var misCabeceras = new Headers();
+
+  var miInit = { method: 'GET', headers: misCabeceras, mode: 'cors', cache: 'default' };
+
   const proxy = 'http://cors-anywhere.herokuapp.com/';
   const api = 'https://api.darksky.net/forecast/3b19ff85d544144e2306cb0d85ea9cb0/';
   let temperatureDescription = document.querySelector('.temperature-description');
@@ -14,7 +18,7 @@ function initMap() {
 
   map.addListener('click', function(e) {
     let posicion = JSON.parse(JSON.stringify(e.latLng));
-    fetch(`${proxy}${api}${posicion.lat},${posicion.lng}`)
+    fetch(`${proxy}${api}${posicion.lat},${posicion.lng}`, miInit)
       .then(res => {
         return res.json();
       })
