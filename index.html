@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="map"></div>
+    <div class="location">
+      <h1 class="location-timezone">Timezone</h1>
+      <canvas id="icon" width="128" height="128"></canvas>
+    </div>
+    <div class="temperature">
+      <div class="degree-section">
+        <h2 class="temperature-degree"></h2>
+        <span>C</span>
+      </div>
+      <div class="temperature-description"></div>
+    </div>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC384vAVx2OgFqqyblDG1O7vVMCahmOZks&callback=initMap"
+    ></script>
+    <script src="skycons.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
