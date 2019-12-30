@@ -4,8 +4,7 @@ function initMap() {
     center: { lat: -25.363882, lng: 131.044922 },
   });
 
-  //const proxy = 'http://cors-anywhere.herokuapp.com/';
-  const proxy = '';
+  const proxy = 'http://cors-anywhere.herokuapp.com/';
   const api = 'https://api.darksky.net/forecast/3b19ff85d544144e2306cb0d85ea9cb0/';
   let temperatureDescription = document.querySelector('.temperature-description');
   let temperatureDegree = document.querySelector('.temperature-degree');
