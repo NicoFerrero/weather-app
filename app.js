@@ -14,7 +14,7 @@ function initMap() {
 
   map.addListener('click', function(e) {
     let posicion = JSON.parse(JSON.stringify(e.latLng));
-    fetch(`${proxy}${api}${posicion.lat},${posicion.lng}`, miInit)
+    fetch(`${proxy}${api}${posicion.lat},${posicion.lng}`)
       .then(res => {
         return res.json();
       })
