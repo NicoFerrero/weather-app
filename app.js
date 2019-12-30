@@ -5,6 +5,7 @@ function initMap() {
   });
 
   var misCabeceras = new Headers();
+  misCabeceras.set('X-Requested-With', 'XMLHttpRequest');
 
   var miInit = { method: 'GET', headers: misCabeceras, mode: 'cors', cache: 'default' };
 
